@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nuestra-empresa.component.scss']
 })
 export class NuestraEmpresaComponent implements OnInit {
+  public title: string;
+  constructor() { 
 
-  constructor() { }
+    this.title = "PRODUCCIÓN, COMERCIALIZACIÓN Y TRANSPORTE DE MINERAL CARBÓN";
+  }
+
 
   ngOnInit(): void {
   }
