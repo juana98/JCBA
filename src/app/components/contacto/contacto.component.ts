@@ -6,10 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contacto.component.scss']
 })
 export class ContactoComponent implements OnInit {
+  public user:any;
+  constructor() { 
 
-  constructor() { }
+    this.user ={
+      nombre:'',
+      apellido:'', 
+      email:'',
+      escri:''
+    };
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
+    alert("Funciono");
+    console.log(this.user);
   }
 
 }
