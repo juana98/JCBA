@@ -941,10 +941,12 @@ textarea{
   line-height: 1.7;
   color: #020202;
   margin: 0px;
-  background-color: #f0d74a;
+  background-color: #f3ef0c;
   width: 60%;
   margin-left: 20%;
   margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px black solid;
   
 
 }
@@ -985,5 +987,20 @@ div.imageCarbon{
   text-align: center;
   
 
+}
+.tituloPS{
+
+  margin-top: 10px;
+  font-family: Raleway-Regular;
+  font-size: 25px;
+  line-height: 1.7;
+  color: #020202;
+  text-align: center;
+  width: 80%;
+  margin-left: 10%;
+  background-color: orange;
+  border: 1px black solid;
+  margin-bottom: 5px;
+  
 }
 
