@@ -922,3 +922,68 @@ textarea{
     }
   }
 
+#paProd{
+
+  font-family: Raleway-Regular;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #020202;
+  background-color:#f0d74a ;
+  width: 60%;
+
+}
+
+
+.tit2{
+
+  font-family: Raleway-Regular;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #020202;
+  margin: 0px;
+  background-color: #f0d74a;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 5px;
+  
+
+}
+
+div.imageCarbon{
+  width: 800px;
+  height: 450px;
+  margin: 10px auto;
+  background-color: rgb(204, 109, 32);
+  color: #fff;
+  padding: 15px;
+
+}
+
+.iz {
+  float: left;
+  margin-right: 15px;
+  width: 420px;
+  height: 420px;
+  
+}
+.tex{
+  margin-top: 140px;
+  font-family: Raleway-Regular;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #020202;
+  text-align: justify;
+
+}
+
+.nomPro{
+  margin-top: 150px;
+  font-family: Raleway-Regular;
+  font-size: 20px;
+  line-height: 1.7;
+  color: #020202;
+  text-align: center;
+  
+
+}
+
