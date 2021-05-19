@@ -1,0 +1,13 @@
+.admin-list-container{
+    display: flex;
+    flex-direction: column;
+    
+    .admin-button-position{
+      left: 0;
+      margin: auto;
+    }
+    .admin-post-title{
+      margin: 2rem 2rem 0;
+    }
+  
+  }

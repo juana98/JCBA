@@ -11,6 +11,7 @@ import{ProdServComponent} from './components/prod-serv/prod-serv.component';
 import{ContactoComponent} from './components/contacto/contacto.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ErrorComponent } from './components/error/error.component';
+import { AdminComponent } from './pages/admin/admin.component';
 
 //arrays de rutas
 
@@ -19,6 +20,8 @@ const appRoutes: Routes = [
     {path: '', component: HomeComponent},
     {path: 'home', component: HomeComponent},
     {path: 'nuestra-empresa', component: NuestraEmpresaComponent},
+    //{ path: 'nuestra-empresa',   redirectTo: '/admin', pathMatch: 'full' },
+    {path: 'admin', component: AdminComponent},
     {path: 'prod-serv', component: ProdServComponent},
     {path: 'contacto', component: ContactoComponent},
     {path: '**', component:ErrorComponent}

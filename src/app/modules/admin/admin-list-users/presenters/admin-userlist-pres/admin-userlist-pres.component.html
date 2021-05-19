@@ -1,0 +1,59 @@
+<div class="admin-user-list-container" *ngIf="(users && users.length > 0) else nouser">
+    <mat-table [dataSource]="users" class="mat-elevation-z8">
+      <!-- Name Column -->
+      <ng-container matColumnDef="idUser">
+        <mat-header-cell *matHeaderCellDef>Cedula</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{ element.idUser }} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef>Nombre</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{ element.name }} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="username">
+        <mat-header-cell *matHeaderCellDef>Nombre usuario</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{ element.username }} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="role">
+        <mat-header-cell *matHeaderCellDef>Rol</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{ element.role }} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="email">
+        <mat-header-cell *matHeaderCellDef>Correo</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{ element.email }} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="edit">
+        <mat-header-cell *matHeaderCellDef>Acciones</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <button
+            mat-icon-button
+            class="example-icon edit-icon"
+            color="primary"
+            aria-label="Edit user"
+            (click)="setEdit(element)"
+          >
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button
+            mat-icon-button
+            class="example-icon delete-icon"
+            color="warn"
+            aria-label="Delete user"
+            (click)="removeUser(element)"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    </mat-table>
+  </div>
+  <ng-template class="admin-user-noresults" #nouser>
+    <h1>Lista de Usuarios</h1>
+  </ng-template>

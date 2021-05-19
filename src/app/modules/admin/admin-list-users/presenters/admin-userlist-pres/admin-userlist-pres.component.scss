@@ -1,0 +1,10 @@
+.admin-user-list-container,
+.admin-user-noresults{
+    display: flex;
+    justify-content: center;
+
+    mat-table{
+        margin: 2rem;
+        flex-grow: 1;
+    }
+}

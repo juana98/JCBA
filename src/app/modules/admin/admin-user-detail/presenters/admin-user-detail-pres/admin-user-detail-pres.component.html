@@ -1,0 +1,38 @@
+<div class="adminlist-card-container">
+    <div class="admin-post-title">
+        <h1>Campos</h1>
+    </div>
+    <mat-card>
+        <form class="adminlist-form-container" [formGroup]="userDetailForm" (ngSubmit)="saveUser(userDetailForm.value)">
+            <mat-form-field appearance="legacy">
+                <mat-label>Nombre</mat-label>
+                <input matInput formControlName="name"  placeholder="name">
+            </mat-form-field>
+            <mat-form-field appearance="legacy">
+                <mat-label>Cedula</mat-label>
+                <input matInput formControlName="idUser"  placeholder="cedula">
+            </mat-form-field>
+            <mat-form-field appearance="legacy">
+                <mat-label>Nombre Usuario</mat-label>
+                <input matInput formControlName="username"  placeholder="username">
+            </mat-form-field>
+            <mat-form-field appearance="legacy">
+                <mat-label>Contraseña</mat-label>
+                <input matInput formControlName="password" type="password" placeholder="contraseña">
+            </mat-form-field>
+            <mat-form-field appearance="legacy">
+                <mat-label>Correo</mat-label>
+                <input matInput formControlName="email"  placeholder="correo">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Rol</mat-label>
+                <mat-select formControlName="role">
+                  <mat-option *ngFor="let role of roles" [value]="role.value">
+                    {{role.viewValue}}
+                  </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <button class="adminlist-button-position" type="submit" mat-raised-button color="primary">Guardar</button>
+        </form>
+    </mat-card>  
+</div>

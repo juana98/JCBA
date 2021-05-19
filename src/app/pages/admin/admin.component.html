@@ -1,0 +1,23 @@
+<div class="admin-list-container">
+    <div class="admin-post-title">
+      <h1>Administración de Usuarios</h1>
+    </div>
+    <button
+      class="admin-button-position"
+      (click)="isCreateMode = true; currentUser = null"
+      mat-raised-button
+     color="primary"
+    >
+      Agregar Usuario
+    </button>
+    <app-admin-userlist-cont>
+      (userToEdit)="changeCurrentUser($event)"
+    </app-admin-userlist-cont>
+</div>
+<div *ngIf="isCreateMode || currentUser">
+  <app-admin-user-detail-cont
+    (closeAction)="closeDetail()"
+    [editMode]="currentUser && !isCreateMode"
+    [userModelDetail]="currentUser"
+  ></app-admin-user-detail-cont>
+</div>
