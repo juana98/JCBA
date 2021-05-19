@@ -1,18 +1,46 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
+import {routing, appRoutingProviders} from './app.routing';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+//instalar el modulo de bootstrap
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { SliderComponent } from './components/slider/slider.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
+import { NuestraEmpresaComponent } from './components/nuestra-empresa/nuestra-empresa.component';
+import { ProdServComponent } from './components/prod-serv/prod-serv.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
+import { ErrorComponent } from './components/error/error.component';
+import { CarruselComponent } from './components/carrusel/carrusel.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    SliderComponent,
+    FooterComponent,
+    HomeComponent,
+    NuestraEmpresaComponent,
+    ProdServComponent,
+    ContactoComponent,
+    ErrorComponent,
+    CarruselComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    routing,
+    FormsModule, 
+    ReactiveFormsModule,
+    NgbModule,
+    CommonModule
   ],
-  providers: [],
+  providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

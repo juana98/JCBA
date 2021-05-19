@@ -1,0 +1,32 @@
+
+<div id="imageUbicacion">
+    <img src="assets/images/Localizacion.PNG" alt/>
+</div>
+
+<form class="mid-form" #escribenos="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="user.nombre" required/>
+    </div>
+
+    <div class="form-group">
+        <label for="apellidos">Apellido</label>
+        <input type="text" name="apellidos" #apellido="ngModel" [(ngModel)]="user.apellido" required />
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" name="email" #email="ngModel" [(ngModel)]="user.email" required/>
+    </div>
+
+    <div class="form-group">
+        <label for="escri">Escribenos</label>
+        <textarea class=estilotextarea name="escri" #escri="ngModel" [(ngModel)]="user.escri" required></textarea>
+    </div>
+    <div class="clearfix"></div>
+    
+
+    <input type="submit" value="Enviar" class="btn btn-success" />
+
+
+</form>
