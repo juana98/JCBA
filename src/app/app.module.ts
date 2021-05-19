@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import {routing, appRoutingProviders} from './app.routing';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+//instalar el modulo de bootstrap
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +16,7 @@ import { NuestraEmpresaComponent } from './components/nuestra-empresa/nuestra-em
 import { ProdServComponent } from './components/prod-serv/prod-serv.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { ErrorComponent } from './components/error/error.component';
+import { CarruselComponent } from './components/carrusel/carrusel.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +28,17 @@ import { ErrorComponent } from './components/error/error.component';
     NuestraEmpresaComponent,
     ProdServComponent,
     ContactoComponent,
-    ErrorComponent
+    ErrorComponent,
+    CarruselComponent,
+    
   ],
   imports: [
     BrowserModule,
     routing,
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule,
+    CommonModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]

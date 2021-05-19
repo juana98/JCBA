@@ -1,0 +1,14 @@
+
+<ngb-carousel *ngFor="let imagen of imagenes">
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img src="{{imagen.imge}}" alt= "Random first slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>{{imagen.name}}</h3>
+        <p>{{imagen.desc}}</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+
+  

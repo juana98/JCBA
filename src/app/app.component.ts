@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-
+import { Component ,
+  ViewChild,
+  AfterViewInit } from '@angular/core';
+import { SharkDirective } from './shark.directive';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
